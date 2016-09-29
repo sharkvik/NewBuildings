@@ -1,5 +1,5 @@
 <?
-    $bundleFile = SITE_ROOT."/design/bundle.less";
+    $bundleFile = SITE_ROOT."/content/bundle.less";
     if( file_exists( $bundleFile ) )
     {
         unlink( $bundleFile );
@@ -39,7 +39,7 @@
         }
         return $content;
     }
-    /*
+
     $cssText = MergeFilesText( SITE_ROOT, 'less' );
     
     $Saved_File = fopen( $bundleFile, 'w+' );
@@ -47,10 +47,9 @@
     fclose( $Saved_File );
     
     $less = new lessc;
-    $less->checkedCompile( $bundleFile, SITE_ROOT."/design/bundle.css" );
+    $less->checkedCompile( $bundleFile, SITE_ROOT."/content/bundle.css" );
 
     if( file_exists( $bundleFile ) )
     {
         unlink( $bundleFile );
     }
-    */
