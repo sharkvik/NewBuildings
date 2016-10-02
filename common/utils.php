@@ -1,4 +1,5 @@
 <?php
+include_once SITE_ROOT.'/common/logger.php';
 function selfURL()
 {
     if( !isset( $_SERVER['REQUEST_URI'] ) )
@@ -59,3 +60,4 @@ function LoadScript( $path, $object = null )
     }
     echo '<script type="text/javascript">$(function(){ new $.'.$path.'('.$data.'); });</script>';
 }
+Logger::Debug( 'utils loaded...' );

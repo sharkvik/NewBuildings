@@ -83,3 +83,4 @@ class DbWrapper
         }
     }
 }
+Logger::Debug( 'DbWrapper loaded...' );

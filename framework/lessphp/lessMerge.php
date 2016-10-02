@@ -53,3 +53,4 @@
     {
         unlink( $bundleFile );
     }
+Logger::Debug( 'lessMerge loaded...' );

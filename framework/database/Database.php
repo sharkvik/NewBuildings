@@ -6,3 +6,4 @@ class Database
     static $Password = '';
     static $User = '';
 }
+Logger::Debug( 'Database loaded...' );

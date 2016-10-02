@@ -5,7 +5,7 @@ class Logger
 
     static function Debug( $log )
     {
-        self::$Content .= 'Trace: '.$log.'<br/>';
+        self::$Content .= 'Debug: '.$log.'<br/>';
     }
 
     static function Show()
