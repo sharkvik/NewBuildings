@@ -1,6 +1,6 @@
 <?php
     include 'framework/packagesLoader.php';
-    using( DOMAIN.'.domain.User' );
+    using( DOMAIN.'.framework.lessphp.lessMerge' );
 
 
     $pageTitle = "ПИА Новостройки | Главная";

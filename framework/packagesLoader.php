@@ -40,11 +40,12 @@ function using( $namespace )
 	$file = Namespaces::Get($namespace);
 	if( isset($file) && file_exists( $file ) )
 	{
-		require_once $file;
 		Logger::Debug( 'Import: '.$file );
+		require_once $file;
 	}
 }
 
 $local_root = SITE_ROOT;
 RegisterNamespaces( $local_root );
+
 unset( $local_root );

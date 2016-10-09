@@ -1,4 +1,39 @@
-.rounded-corners( @corner: 6px )
+@font-face {
+  font-family: f9566;
+  src: url(fonts/9566.ttf);
+}
+
+@font-face {
+  font-family: f9569;
+  src: url(fonts/9569.ttf);
+}
+
+@font-face {
+  font-family: f9570;
+  src: url(fonts/9570.ttf);
+}
+
+@font-face {
+  font-family: f9576;
+  src: url(fonts/9576.ttf);
+}
+
+@font-face {
+  font-family: Exo2_0-Medium;
+  src: url(fonts/Exo2_0-Medium.otf);
+}
+
+@font-face {
+  font-family: Exo2_0-Regular;
+  src: url(fonts/Exo2_0-Regular.otf);
+}
+
+@font-face {
+  font-family: Exo2_0-SemiBold;
+  src: url(fonts/Exo2_0-SemiBold.otf);
+}
+
+.rounded-corners( @corner: 10px )
 {
   -moz-border-radius: @corner;
   -webkit-border-radius: @corner;
@@ -6,7 +41,7 @@
   -khtml-border-radius: @corner;
 }
 
-.rounded-corners( @nw: 6px, @ne: 6px, @se: 6px, @sw: 6px )
+.rounded-corners( @nw: 10px, @ne: 10px, @se: 10px, @sw: 10px )
 {
   -moz-border-radius-topleft: @nw;
   -moz-border-radius-topright: @ne;
@@ -22,9 +57,12 @@
 *{
   color: #122136;
   font-size: 14px;
+  font-family: f9576;
+  letter-spacing: 1px;
 }
 
 .button{
+  font: inherit;
   font-size: 16px;
   color: white;
   text-align: center;
@@ -32,6 +70,10 @@
   border: 2px solid white;
   display: inline-block;
   .rounded-corners;
+  cursor: pointer;
+  width: 250px;
+  font-family: Exo2_0-Regular;
+  letter-spacing: 0;
 
   &.type1{
     text-decoration: underline;
@@ -86,4 +128,12 @@ textarea{
   color: #cdcdcd;
   padding: 10px 30px;
   .rounded-corners;
+}
+
+a{
+  color: #467bba;
+  text-decoration: none;
+  &:hover{
+      text-decoration: underline;
+  }
 }

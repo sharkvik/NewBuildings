@@ -6,6 +6,7 @@ header("cache-control: private, max-age = 3600");
 <html>
     <head>
         <title><? echo $pageTitle; ?></title>
+        <link href="<? echo CSS.'?'.filemtime( SITE_ROOT.CSS );?>" rel="stylesheet" type="text/css">
     </head>
     <body>
         <?

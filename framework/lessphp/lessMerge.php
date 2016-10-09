@@ -1,4 +1,5 @@
 <?
+    require_once 'lessc.inc.php';
     $bundleFile = SITE_ROOT."/content/bundle.less";
     if( file_exists( $bundleFile ) )
     {
@@ -59,7 +60,8 @@
     fclose( $Saved_File );
     
     $less = new lessc;
-    $less->checkedCompile( $bundleFile, SITE_ROOT."/content/bundle.css" );
+    //$less->setFormatter("compressed");
+    $less->checkedCompile( $bundleFile, SITE_ROOT.CSS );
 
     if( file_exists( $bundleFile ) )
     {
