@@ -1,0 +1,89 @@
+.rounded-corners( @corner: 6px )
+{
+  -moz-border-radius: @corner;
+  -webkit-border-radius: @corner;
+  border-radius: @corner;
+  -khtml-border-radius: @corner;
+}
+
+.rounded-corners( @nw: 6px, @ne: 6px, @se: 6px, @sw: 6px )
+{
+  -moz-border-radius-topleft: @nw;
+  -moz-border-radius-topright: @ne;
+  -moz-border-radius-bottomright: @se;
+  -moz-border-radius-bottomleft: @sw;
+
+  -webkit-border-top-left-radius: @nw;
+  -webkit-border-top-right-radius: @ne;
+  -webkit-border-bottom-right-radius: @se;
+  -webkit-border-bottom-left-radius: @sw;
+}
+
+*{
+  color: #122136;
+  font-size: 14px;
+}
+
+.button{
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
+  border: 2px solid white;
+  display: inline-block;
+  .rounded-corners;
+
+  &.type1{
+    text-decoration: underline;
+    background: transparent;
+    &:hover{
+      text-decoration: none;
+      background: rgba( 255, 255, 255, 0.5 );
+    }
+  }
+
+  &.type2{
+    background: rgba( 255, 255, 255, 0.5 );
+    text-transform: uppercase;
+    &:hover{
+      text-decoration: underline;
+      background: rgba( 255, 255, 255, 1 );
+      color: black;
+    }
+  }
+
+  &.type3{
+    background: #141f32;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &.icon{
+    background: white;
+    color: black;
+    border: 2px solid black;
+    &:hover{
+      background: rgba( 255, 255, 255, 0.5 );
+      color: white;
+      border: 2px solid white;
+    }
+  }
+}
+
+label{
+  color: #949494;
+}
+
+input[type="text"],
+input[type="passord"],
+input[type="phone"],
+input[type="email"],
+select,
+textarea{
+  background: white;
+  border: 1px solid #cdcdcd;
+  color: #cdcdcd;
+  padding: 10px 30px;
+  .rounded-corners;
+}
