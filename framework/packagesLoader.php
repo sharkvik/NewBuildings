@@ -12,7 +12,7 @@ function RegisterNamespaces( $rootPath )
 		{
 			while( ( $file = readdir( $dh ) ) !== false )
 			{
-				if( $file != "." && $file != ".." && strpos($file, 'www') !== false )
+				if( $file != "." && $file != ".." )
 				{
 					$fileWithRoot = $fullPath."/".$file;
 					if( is_dir( $fileWithRoot ) )
